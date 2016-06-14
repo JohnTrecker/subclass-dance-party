@@ -6,20 +6,16 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   // this one sets the position to some random default point within the body
   this.top = top;
   this.left = left;
-  // this.step();
-  // this.timeBetweenSteps = timeBetweenSteps;
+  this.timeBetweenSteps = timeBetweenSteps;
+  this.step();
 };
 
 makeDancer.prototype.step = function() {
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
+  debugger;
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 
-  setTimeout(this.step, timeBetweenSteps);
-  /* Or perhaps we need ... 
-  setTimeout(function() {
-    step.call(this)
-  }, timeBetweenSteps);
-  */
 };
 
 makeDancer.prototype.setPosition = function(top, left) {
