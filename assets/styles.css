@@ -3,10 +3,14 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color:grey;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
+  background-repeat: no-repeat;
+  background-image: url('http://i.imgur.com/T8mG1ZT.gif');
+  background-size: 75% 75%; 
+  background-position: center;
   color: lightblue;
 }
 .title, .addDancerButton {
